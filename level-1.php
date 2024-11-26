@@ -68,11 +68,11 @@ $posts = readPosts();
     <ul>
         <?php foreach ($posts as $post): ?>
             <li>
-                <h3><?php echo htmlspecialchars($post['title']); ?></h3>
-                <p><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
-                <button onclick="editPost('<?php echo $post['id']; ?>', '<?php echo addslashes($post['title']); ?>', '<?php echo addslashes($post['content']); ?>')">Edit</button>
+                <h3><?= htmlspecialchars($post['title']); ?></h3>
+                <p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
+                <button onclick="editPost('<?= $post['id']; ?>', '<?php echo addslashes($post['title']); ?>', '<?= addslashes($post['content']); ?>')">Edit</button>
                 <form action="" method="post" style="display: inline;">
-                    <input type="hidden" name="id" value="<?php echo $post['id']; ?>">
+                    <input type="hidden" name="id" value="<?= $post['id']; ?>">
                     <button type="submit" name="delete">Delete</button>
                 </form>
             </li>
