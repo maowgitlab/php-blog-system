@@ -74,12 +74,12 @@ $posts = readPosts();
         <ul class="space-y-4">
             <?php foreach ($posts as $post): ?>
                 <li class="bg-white p-4 rounded shadow">
-                    <h3 class="text-lg font-bold"><?php echo htmlspecialchars($post['title']); ?></h3>
-                    <p class="text-gray-700"><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
+                    <h3 class="text-lg font-bold"><?= htmlspecialchars($post['title']); ?></h3>
+                    <p class="text-gray-700"><?= nl2br(htmlspecialchars($post['content'])); ?></p>
                     <div class="mt-2">
-                        <button onclick="editPost('<?php echo $post['id']; ?>', '<?php echo addslashes($post['title']); ?>', '<?php echo addslashes($post['content']); ?>')" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded">Edit</button>
+                        <button onclick="editPost('<?= $post['id']; ?>', '<?= addslashes($post['title']); ?>', '<?= addslashes($post['content']); ?>')" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded">Edit</button>
                         <form action="" method="post" style="display: inline;">
-                            <input type="hidden" name="id" value="<?php echo $post['id']; ?>">
+                            <input type="hidden" name="id" value="<?= $post['id']; ?>">
                             <button type="submit" name="delete" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Delete</button>
                         </form>
                     </div>
