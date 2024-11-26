@@ -70,7 +70,7 @@ $posts = readPosts();
             <li>
                 <h3><?= htmlspecialchars($post['title']); ?></h3>
                 <p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
-                <button onclick="editPost('<?= $post['id']; ?>', '<?php echo addslashes($post['title']); ?>', '<?= addslashes($post['content']); ?>')">Edit</button>
+                <button onclick="editPost('<?= $post['id']; ?>', '<?= addslashes($post['title']); ?>', '<?= addslashes($post['content']); ?>')">Edit</button>
                 <form action="" method="post" style="display: inline;">
                     <input type="hidden" name="id" value="<?= $post['id']; ?>">
                     <button type="submit" name="delete">Delete</button>
